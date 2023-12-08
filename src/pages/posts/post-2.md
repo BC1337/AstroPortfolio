@@ -1,4 +1,5 @@
 ---
+    layout: ../../layouts/MarkdownPostLayout.astro
     title: 'My Second Blog Post'
     author: 'BC'
     description: "Developer experience seems very good with astro. really enjoying it so far."
@@ -9,4 +10,6 @@
     tags: ["astro", "blogging", "learning in public", "successes", "winner"]
 
 ---
-Much more streamlined than any other framework i've tried. i will be adding this into my regular workflow as much as i can. 
+Much more streamlined than any other framework i've tried.
+
+i will be adding this into my regular workflow as much as i can. 

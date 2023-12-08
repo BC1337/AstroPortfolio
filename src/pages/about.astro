@@ -1,6 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
 import '../styles/global.css'
 const pageTitle = "About Me"
 
@@ -23,17 +22,11 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-
+<BaseLayout pageTitle={pageTitle}>
     <style define:vars={{skillColor, fontWeight, textCase}}>
         h1 {
-            color: purple;
+            color: var(--skillColor);
             font-size: 4rem;
         }
 
@@ -43,12 +36,6 @@ const textCase = "uppercase";
             text-transform: var(--textCase);
         }
     </style>
-
-</head>
-
-<body>
-    <Header />
-    <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
     <p>I am working through Astro's introductory tutorial.</p>
     <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!
@@ -65,8 +52,8 @@ const textCase = "uppercase";
     <ul>
         <li>My name is {identity.firstName}</li>
         <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2&&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[2]}</li>
+        {identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[2]}</li>
         }
     </ul>
 
@@ -75,11 +62,4 @@ const textCase = "uppercase";
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    <Footer />
-
-    <script>
-        import "../scripts/menu.js";
-    </script>
-</body>
-
-</html>
+</BaseLayout>
