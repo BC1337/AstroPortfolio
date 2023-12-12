@@ -1,0 +1,74 @@
+/* Add this to your global.css or a separate landing.css file */
+.featured-posts {
+  margin-top: 20px;
+}
+
+.featured-post {
+  margin-bottom: 20px;
+  background-color: #1c2a36; /* Navy Blue */
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+
+.featured-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-post-content {
+  padding: 15px; /* Adjusted padding */
+  
+}
+
+.featured-post-title {
+  font-size: 1.5rem;
+  color: #f9a825; /* Vibrant Orange */
+  margin-bottom: 8px; /* Adjusted margin */
+  
+}
+
+.featured-post-description {
+  font-size: 1rem;
+  color: #FFF; /* White */
+  margin-left: 10px;
+}
+
+.featured-post-link {
+  display: block;
+  margin-top: 8px; /* Adjusted margin */
+  margin-left: 10px;
+  color: #f9a825; /* Vibrant Orange */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  
+ 
+}
+
+.featured-post-link:hover {
+  color: #7c5a17; /* Darker shade of Vibrant Orange */
+}
+
+/* Light mode theme */
+html:not(.dark) .featured-post {
+  background-color: #fff; /* White */
+}
+
+html:not(.dark) .featured-post-title {
+  color: #1c2a36; /* Navy Blue */
+}
+
+html:not(.dark) .featured-post-description {
+  color: #333; /* Dark Gray */
+}
+
+html:not(.dark) .featured-post-link {
+  color: #000; /* Black */
+}
+
+html:not(.dark) .featured-post-link:hover {
+  color: #7c5a17; /* Darker shade of Vibrant Orange */
+}
