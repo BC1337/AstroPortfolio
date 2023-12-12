@@ -1,40 +1,41 @@
+/* Reset and default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
-  }
-  
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-  }
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
 
-  /* nav styles */
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
 
-  .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-  }
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
 
+/* Navigation styles */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
 
 .nav-links {
   width: 100%;
@@ -78,20 +79,25 @@ html {
     padding: 15px 20px;
   }
 
-
   .hamburger {
     display: none;
   }
-
 }
 
-// dark mode theme
-
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
+/* Dark mode theme */
+body.dark {
+  background-color: #0d0950 !important;
+  color: #fff !important;
 }
 
-.dark .nav-links a {
-  color: #fff;
+body.dark .nav-links a {
+  color: #fff !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark button {
+  color: #fff !important;
 }
