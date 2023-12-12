@@ -85,19 +85,19 @@ h1 {
 }
 
 /* Dark mode theme */
-body.dark {
+html.dark {
   background-color: #0d0950 !important;
   color: #fff !important;
 }
 
-body.dark .nav-links a {
+html.dark .nav-links a {
   color: #fff !important;
 }
 
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark p,
-body.dark button {
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark p,
+html.dark button {
   color: #fff !important;
 }
