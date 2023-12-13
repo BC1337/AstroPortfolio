@@ -1,14 +1,23 @@
 ---
-const {platform, username} = Astro.props
+const { platform, username } = Astro.props;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.{platform}.com/{username}`} class="social-button" target="_blank" rel="noopener noreferrer">
+  {platform}
+</a>
 
 <style>
-    a {
-        padding: 0.5rem 1rem;
-        color: white;
-        background-color: #4c1d95;
-        text-decoration: none;
-    }
+  .social-button {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    color: white;
+    background-color: #000000; /* Twitter color, you can adjust this based on your preference */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .social-button:hover {
+    background-color: #1c2a36; /* Darker shade on hover */
+  }
 </style>

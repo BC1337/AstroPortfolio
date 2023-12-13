@@ -6,18 +6,46 @@ import '../styles/landing.css';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<p>Welcome to my corner of the web! Here, I share my experiences, insights, and tips on navigating the ever-evolving landscape of web development.</p>
+	<p class="mb-12">Welcome to my corner of the web! Here, I share my experiences, insights, and tips on navigating the ever-evolving landscape of web development.</p>
+	<br>
 	<div class="featured-posts">
-	  <h2>Featured Posts</h2>
-	  <ul>
-		<li class="featured-post">
-		  <a href="/blog/post-1" class="featured-post-link">Demystifying CSS Flexbox</a>
-		  <p class="featured-post-description">A deep dive into the world of CSS Flexbox...</p>
-		</li>
-		<li class="featured-post">
-		  <a href="/blog/post-2" class="featured-post-link">Building Responsive Layouts with CSS Grid</a>
-		  <p class="featured-post-description">Learn how to create responsive layouts using CSS Grid...</p>
-		</li>
-	  </ul>
-	</div>
+		<h2>Featured Posts</h2>
+		<ul>
+		  <li class="featured-post">
+			<div class="featured-post-content">
+			  <div class="featured-post-image">
+				<img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg" alt="Demystifying CSS Flexbox" />
+			  </div>
+			  <div class="featured-post-details">
+				<h3 class="featured-post-title"><a href="/posts/post-1" class="featured-post-link">Efficient Learning With Timeboxing</a></h3>
+				<p class="featured-post-description">A few techniques I have been using to improve consuming information...</p>
+			  </div>
+			</div>
+		  </li>
+		  <li class="featured-post">
+			<!-- Similar structure for the second featured post -->
+			<div class="featured-post-content">
+				<div class="featured-post-image">
+				  <img src="https://cdn.pixabay.com/photo/2016/12/01/13/10/lightbulb-1875247_960_720.jpg" alt="image of a monitor, keyboard and mouse" />
+				</div>
+				<div class="featured-post-details">
+				  <h3 class="featured-post-title"><a href="/posts/post-2" class="featured-post-link">My Journey Learning Astro</a></h3>
+				  <p class="featured-post-description">My thoughts on the Astro Framework...</p>
+				</div>
+			  </div>
+		  </li>
+		  <li class="featured-post">
+			<!-- Similar structure for the second featured post -->
+			<div class="featured-post-content">
+				<div class="featured-post-image">
+				  <img src="https://cdn.pixabay.com/photo/2021/10/11/17/36/technology-6701405_1280.jpg" alt="Demystifying CSS Flexbox" />
+				</div>
+				<div class="featured-post-details">
+				  <h3 class="featured-post-title"><a href="/posts/post-3" class="featured-post-link">Pomodoro Timers. Yay Or Nay?</a></h3>
+				  <p class="featured-post-description">A deep dive into the world of CSS Flexbox...</p>
+				</div>
+			  </div>
+		  </li>
+		</ul>
+	  </div>
   </BaseLayout>

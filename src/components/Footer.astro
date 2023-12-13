@@ -1,19 +1,35 @@
 ---
 import Social from "./Social.astro";
-
 ---
+
 <style>
-    footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
+  footer {
+    @apply flex flex-col items-center mt-8 mb-8;
+  }
+
+  p {
+    @apply mb-4 text-gray-200 text-lg;
+  }
+
+  .social-container {
+    @apply flex gap-4;
+  }
+
+  /* Apply styles to Social component */
+  .social-button {
+    @apply inline-block px-4 py-3 text-white bg-blue-500 rounded transition duration-300 ease-in-out;
+  }
+
+  .social-button:hover {
+    @apply bg-blue-700;
+  }
 </style>
 
 <footer>
-    <p>Learn more about my projects on 
-        <Social platform="twitter" username="@BCalm1337" />
-        <Social platform="github" username="BC1337" />
-        <Social platform="youtube" username="@brett-codes" />
+  <p>Learn more about my projects on</p>
+  <div class="social-container">
+    <Social platform="twitter" username="@BCalm1337" class="social-button" />
+    <Social platform="github" username="BC1337" class="social-button" />
+    <Social platform="youtube" username="@brett-codes" class="social-button" />
+  </div>
 </footer>
-
