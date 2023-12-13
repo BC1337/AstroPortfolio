@@ -1,11 +1,11 @@
 ---
     layout: ../../layouts/MarkdownPostLayout.astro
-    title: 'My Fourth Blog Post'
+    title: 'Not a filler blog post'
     author: 'BC'
-    description: "Testing the dynamic rendering of my blogs"
+    description: "This blog post is not just filler, i would never do that..."
     image:
-        url: "https://docs.astro.build/assets/arc.webp"
-        alt: "Thumbnail of Astro arcs."
+        url: ""
+        alt: ""
     pubDate: 2023-08-12
     tags: ["astro", "blogging", "learning", "successes", "consistency", "fun", "dynamic tags"]
 ---

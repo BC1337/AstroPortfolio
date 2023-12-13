@@ -1,11 +1,11 @@
 ---
     layout: ../../layouts/MarkdownPostLayout.astro
-    title: 'My Fifth Blog Post'
+    title: 'My Fifth Blog Post: Adding an RSS feed'
     author: 'BC'
-    description: "Adding an RSS feed"
+    description: ""
     image:
-        url: "https://docs.astro.build/assets/arc.webp"
-        alt: "Thumbnail of Astro arcs."
+        url: ""
+        alt: ""
     pubDate: 2023-08-12
     tags: ["astro", "blogging", "learning", "successes", "consistency", "fun", "RSS feed"]
 ---
