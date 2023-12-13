@@ -2,7 +2,7 @@
 const { platform, username } = Astro.props;
 ---
 
-<a href={`https://www.{platform}.com/{username}`} class="social-button" target="_blank" rel="noopener noreferrer">
+<a href={`https://www.${platform}.com/${username}`} class="social-button" target="_blank" rel="noopener noreferrer">
   {platform}
 </a>
 
@@ -20,4 +20,5 @@ const { platform, username } = Astro.props;
   .social-button:hover {
     background-color: #1c2a36; /* Darker shade on hover */
   }
+  
 </style>

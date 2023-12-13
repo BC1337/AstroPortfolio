@@ -1,65 +1,81 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import '../styles/global.css'
-const pageTitle = "About Me"
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const pageTitle = "About Me";
 
 const identity = {
-firstName: "Brett",
-country: "Canada",
-occupation: "Software Developer",
-hobbies: ["Tennis", "Chess", "Hiking"]
-}
+  firstName: "Brett",
+  country: "Canada",
+  occupation: "Software Developer",
+  hobbies: ["Tennis", "Chess", "Hiking"]
+};
 
-const skills = ["HTML", "CSS", "Javascript", "React", "Astro", "Tailwindcss",
-"NodeJS", "MongoDB", "Writing Docs"
-]
+const skills = ["HTML", "CSS", "Javascript", "React", "Astro", "Tailwindcss", "NodeJS", "MongoDB", "Writing Docs"];
 
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-        h1 {
-            color: var(--skillColor);
-            font-size: 4rem;
-        }
+  <h1>Welcome to My Blog!</h1>
 
-        .skill {
-            color: var(--skillColor);
-            font-weight: var(--fontWeight);
-            text-transform: var(--textCase);
-        }
-    </style>
-    <h2>... and my new Astro site!</h2>
-    <p>I am working through Astro's introductory tutorial.</p>
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!
-    </p>
+  <p>
+    Hey there! I'm {identity.firstName}, a passionate Software Developer. Currently, I'm diving head first into the world of Fullstack Web Development and you're witnessing my journey unfold.
+  </p>
 
-    <br>
-    {happy && <p>I am happy to be learning Astro!</p>}
+  <br>
 
-    {finished && <p>I finished this tutorial!</p>}
+  <p>
+    I live for {identity.hobbies[0]}, {identity.hobbies[1]}, and {identity.hobbies[2]}. When I'm not coding, you'll find me enjoying these activities and exploring the beautiful landscapes of Canada.
+  </p>
 
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  <br>
 
-    <p>Here are a few facts about me:</p>
-    <ul>
-        <li>My name is {identity.firstName}</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[2]}</li>
-        }
-    </ul>
+  <p>
+   My focus currently is Astro, and this site will reflect my progress. Check back for updates and witness my journey!
+  </p>
 
-    <br>
-    <p>my skills are:</p>
-    <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
+  <br />
+  <br />
+
+  <p>My skills include:</p>
+   <!--  map over the skills here and display them -->
+   <ul>
+    {skills.map((skill, index) => (
+      <li key={index}>{skill}</li>
+    ))}
+  </ul>
 </BaseLayout>
+
+<style>
+    h1 {
+      color: navy;
+      font-size: 4rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      background-color: #f9a825;
+      padding: 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-right: 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  
+    li:hover {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+  </style>
