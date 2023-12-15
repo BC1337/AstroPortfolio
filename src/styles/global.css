@@ -93,12 +93,12 @@ html:not(.dark) {
 }
 
 html:not(.dark) .nav-links a {
-  color: #333 !important; /* Add !important to override existing styles */
+  color: #333;
 }
 
 html:not(.dark) .nav-links a:hover,
 html:not(.dark) .nav-links a:focus {
-  background-color: #ddd !important; /* Light Grayish Hover Color with !important */
+  background-color: #ddd;
 }
 
 html:not(.dark) h1,
@@ -106,7 +106,7 @@ html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) p,
 html:not(.dark) button {
-  color: #333 !important; /* Add !important to override existing styles */
+  color: #333; 
 }
 
 /* Dark mode theme */
@@ -116,15 +116,16 @@ html.dark {
 }
 
 html.dark .nav-links a {
-  color: #fff !important; /* Add !important to override existing styles */
+  color: #fff; 
 }
 
 html.dark .nav-links a:hover,
 html.dark .nav-links a:focus {
-  background-color: #33445c !important; /* Darker background for Hover/Focus Color with !important */
-  color: #fff !important; /* White text color with !important */
+  background-color: #33445c; 
+  color: #fff;
 }
 
 html.dark h1 {
   color: #f9a825; /* Vibrant Orange */
 }
+

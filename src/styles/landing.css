@@ -63,3 +63,30 @@ html:not(.dark) .featured-post-description,
 html:not(.dark) .featured-post-link {
   color: #1c2a36; /* Navy Blue */
 }
+
+
+// media queries
+
+/* Hide the image on screens less than 685 pixels */
+@media screen and (max-width: 685px) {
+  .featured-post-image {
+    display: none;
+  }
+
+  /* Adjust styles for the remaining content when image is hidden */
+  .featured-post-details {
+    flex: 1; /* Expand the details section to fill the space */
+    padding: 15px;
+  }
+
+  .featured-post-title {
+    font-size: 1.2rem; /* Adjust font size */
+    margin-bottom: 6px; /* Adjust margin */
+  }
+
+  .featured-post-description {
+    font-size: 1rem;
+    color: #1c2a36; /* Navy Blue */
+    margin-left: 0; /* Remove margin */
+  }
+}

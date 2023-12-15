@@ -1,0 +1,34 @@
+/* Add this block to your landing.css file or global.css file */
+
+/* Adjust spacing and add bullet points to the list */
+ul {
+    list-style: disc; /* Use disc bullets */
+    padding-left: 20px; /* Adjust as needed */
+  }
+  
+  /* Add spacing between list items */
+  li {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  /* Add some styling to the links */
+  a {
+    color: #1c2a36; /* Navy Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Adjust link color in dark mode */
+  html.dark a {
+    color: #fff; /* White */
+  }
+  
+  a:hover {
+    color: #f9a825; /* Vibrant Orange */
+  }
+  
+  /* Adjust link hover color in dark mode */
+  html.dark a:hover {
+    color: #f9a825; /* Vibrant Orange */
+  }
+  
