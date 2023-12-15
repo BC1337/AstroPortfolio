@@ -1,5 +1,4 @@
 ---
-    layout: ../../layouts/MarkdownPostLayout.astro
     title: 'My Fifth Blog Post: Adding an RSS feed'
     author: 'BC'
     description: ""

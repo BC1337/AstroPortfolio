@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Efficient Learning With Timeboxing'
 pubDate: 2023-07-12
 description: 'This is the first post of my new Astro blog.'

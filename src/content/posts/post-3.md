@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Boost Your Learning with Pomodoro Timers: A Productivity Game-Changer'
 pubDate: 2023-12-13
 description: 'Explore the power of Pomodoro timers and transform your learning experience.'

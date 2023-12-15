@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Streamlined Learning with Astro: A Developer’s Delight'
 pubDate: 2023-12-13
 description: 'Discover the ease and joy of learning Astro, the futuristic static site generator.'

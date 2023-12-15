@@ -1,5 +1,4 @@
 ---
-    layout: ../../layouts/MarkdownPostLayout.astro
     title: 'Not a filler blog post'
     author: 'BC'
     description: "This blog post is not just filler, i would never do that..."
