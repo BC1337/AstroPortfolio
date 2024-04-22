@@ -103,15 +103,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButtons = document.querySelectorAll('.details-toggle');
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll('.details-toggle');
 
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const detailsList = this.nextElementSibling;
-                detailsList.style.display = detailsList.style.display === 'none' ? 'block' : 'none';
-            });
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const detailsList = this.nextElementSibling;
+            const computedStyle = window.getComputedStyle(detailsList);
+            const currentDisplay = computedStyle.getPropertyValue('display');
+
+            detailsList.style.display = currentDisplay === 'none' ? 'block' : 'none';
         });
     });
+});
+
 </script>
 
