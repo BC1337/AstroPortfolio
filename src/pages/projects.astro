@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <section class="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-card">
+            <h3 class="project-title">Fullstack Auth App</h3>
+            <img src="/fullstackauth.png" alt="Fullstack Auth App Screenshot" class="project-screenshot">
+            <button class="details-toggle">Toggle Details</button>
+            <ul class="project-details" style="display: none;">
+                <li>Developed frontend with Astro + React for a dynamic and interactive user interface.</li>
+                <li>Implemented backend services with Node.js and Express.js for user authentication and authorization.</li>
+                <li>Used MongoDB as the database to store user information securely.</li>
+                <li>Implemented JWT authentication for secure user authentication and access control.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h3 class="project-title">Brain Trainer Arcade</h3>
+            <img src="/braintrainer.png" alt="Brain Trainer Arcade Screenshot" class="project-screenshot">
+            <button class="details-toggle">Toggle Details</button>
+            <ul class="project-details" style="display: none;">
+                <li>Developed various challenging mini-games to boost cognitive skills.</li>
+                <li>Utilized CSS animations for engaging and interactive user experiences.</li>
+                <li>Implemented JavaScript logic for game mechanics and scoring.</li>
+                <li>Designed a responsive layout for seamless gameplay across devices.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h3 class="project-title">Web Scraper</h3>
+            <img src="https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg" alt="Web Scraper Screenshot" class="project-screenshot">
+            <button class="details-toggle">Toggle Details</button>
+            <ul class="project-details" style="display: none;">
+                <li>Developed with Next.js for efficient server-side rendering and API routes.</li>
+                <li>Utilized Cheerio library for parsing HTML and extracting targeted data.</li>
+                <li>Integrated BrightData API for proxy management and overcoming CAPTCHA challenges.</li>
+                <li>Configured a user-friendly CLI interface for easy data extraction.</li>
+            </ul>
+            
+        </div>
+    </section>
+</BaseLayout>
+
+
+<style>
+    .projects {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        border-bottom: 1px solid #f9a825;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f9a825;
+    }
+    .project-card {
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+    }
+    .project-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+    .details-toggle {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin-top for spacing */
+    margin-bottom: 10px; /* Add margin-bottom for spacing */
+}
+    .details-toggle:hover {
+        background-color: #0056b3;
+        
+    }
+    .project-details {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .project-details li {
+        margin-bottom: 8px;
+    }
+
+    li{
+        color: #007bff;
+        font-weight: 600;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButtons = document.querySelectorAll('.details-toggle');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const detailsList = this.nextElementSibling;
+                detailsList.style.display = detailsList.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    });
+</script>
+

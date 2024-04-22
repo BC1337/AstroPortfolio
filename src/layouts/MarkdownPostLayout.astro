@@ -5,33 +5,27 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout>
-  <h1>{frontmatter.title}</h1>
-  <p>Written by {frontmatter.author}</p>
-  <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
-  <p transition:animate={fade({ duration: '2s' })}>
-    <em>{frontmatter.description}</em>
-  </p>
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author}</p>
+<p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+<p transition:animate={fade({ duration: '2s' })}>
+  <em>{frontmatter.description}</em>
+</p>
 
-  <div class="tags">
+<div class="tags">
     {frontmatter.tags.map((tag) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
   </div>
   
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="featured-post-image" />
-  <br>
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+<br>
+<slot />
+</BaseLayout>
 
-  <slot />
-
-  <style>
+<style>
     a {
       color: #00539F;
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      color: #FF5733;
-      margin-top: 1em; /* Add margin-top for spacing */
-      margin-bottom: 0.5em; /* Add margin-bottom for spacing */
     }
   
     .tags {
@@ -47,26 +41,4 @@ const { frontmatter } = Astro.props;
       font-size: 1.15em;
       background-color: #F8FCFD;
     }
-  
-    p {
-      margin-bottom: 1rem; /* Add margin-bottom for spacing */
-    }
-
-    .featured-post-image {
-      flex: 1;
-      max-width: 200px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-
-    .featured-post-image img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      min-width: 50px; /* Set a minimum width for the image */
-      min-height: 50px; /* Set a minimum height for the image */
-    }
   </style>
-</BaseLayout>

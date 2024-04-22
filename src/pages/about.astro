@@ -12,8 +12,7 @@ const identity = {
 };
 
 const skills = [
-  "HTML", "CSS", "Javascript", "React","Svelte","Astro",
-   "Tailwindcss", "NodeJS", "Prisma", "MongoDB","Git", "Python", "Writing Docs"
+  "HTML", "CSS", "Tailwindcss", "Javascript", "React", "Astro", "NodeJS", "MongoDB", "PostgreSQL", "Prisma", "Git", "Restful APIs",
 ];
 
 ---
@@ -60,24 +59,32 @@ const skills = [
     }
   
     ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
-  
+
     li {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      background-color: #f9a825;
-      padding: 1rem;
-      border-radius: 8px;
-      display: inline-block;
-      margin-right: 1rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px; /* Use a large value for a rounded pill shape */
+        background-color: #f9a825;
+        color: #333;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-align: center;
     }
-  
+
     li:hover {
-      background-color: #e0e0e0;
-      color: #333;
+        background-color: #e0e0e0;
+        color: #333;
     }
   </style>
