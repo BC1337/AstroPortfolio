@@ -1,31 +1,40 @@
-"use client"
-// ProjectCard.jsx
-import { h, useState } from "preact";
+import { h } from 'preact';
 
-const ProjectCard = ({ title, screenshot, description, details }) => {
-  const [showDetails, setShowDetails] = useState(false);
+const ProjectCard = ({ title, screenshot, description, demoHref, demoText }) => {
+  const cardStyles = {
+    backgroundColor: '#17222d',
+    color: 'white',
+    padding: '12px',
+    borderRadius: '5px',
+    transition: 'background-color 0.3s ease',
+    margin: '10px',
+  };
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
+  const linkStyles = {
+    backgroundColor: 'orange',
+    color: 'white',
+    padding: '12px 24px',
+    borderRadius: '5px',
+    textDecoration: 'none',
+    transition: 'background-color 0.3s ease',
+    marginTop: '8px',
+    marginBottom: '8px',
+  };
+
+  const lightModeStyles = {
+    color: 'white', // Set text color to light in light mode
   };
 
   return (
-    <div className="project-card">
-      <h3 className="project-title">{title}</h3>
-      <img src={screenshot} alt={`${title} Screenshot`} className="project-screenshot" />
-      <p className="project-description">{description}</p>
-      <div className={`project-details-container ${showDetails ? 'show-details' : ''}`}>
-        <ul className="project-details">
-          {details.map((detail, index) => (
-            <li key={index}>{detail}</li>
-          ))}
-        </ul>
+    <div className="project-card" style={{ ...cardStyles, ...lightModeStyles }}>
+      <div className="project-screenshot" style={{ backgroundImage: `url(${screenshot})`, backgroundSize: 'cover', height: '200px' }}></div>
+      <div className="project-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <h3 className="project-title" style={{ margin: '8px 0', ...lightModeStyles }}>{title}</h3>
+        <p className="project-description" style={{ margin: '8px 0', ...lightModeStyles }}>{description}</p>
+        <a href={demoHref} className="project-link" style={linkStyles} target="_blank" rel="noopener noreferrer">
+          {demoText}
+        </a>
       </div>
-      <button className="details-toggle" onClick={toggleDetails}>
-        <i className={`fas ${showDetails ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-        {showDetails ? 'Hide Details' : 'Show Details'}
-      </button>
-      <a href="#" className="project-link">View Project</a>
     </div>
   );
 };

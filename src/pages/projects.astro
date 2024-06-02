@@ -1,159 +1,49 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.jsx";
+import '../styles/global.css';
 ---
 
-<BaseLayout>
-    <section class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="project-card">
-            <h3 class="project-title">Brain Trainer Arcade</h3>
-            <img src="/braintrainer.png" alt="Brain Trainer Arcade Screenshot" class="project-screenshot">
-            <div class="button-container">
-                <button class="details-toggle">Toggle Details</button>
-                <a href="brain-trainer-arcade.vercel.app" target="_blank" class="demo-button">View Demo</a>
-            </div>
-            <ul class="project-details" style="display: none;">
-                <li>Developed various challenging mini-games to boost cognitive skills.</li>
-                <li>Utilized CSS animations for engaging and interactive user experiences.</li>
-                <li>Implemented JavaScript logic for game mechanics and scoring.</li>
-                <li>Designed a responsive layout for seamless gameplay across devices.</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <h3 class="project-title">Fullstack Auth App</h3>
-            <img src="/fullstackauth.png" alt="Fullstack Auth App Screenshot" class="project-screenshot">
-            <div class="button-container">
-                <button class="details-toggle">Toggle Details</button>
-                <a href="https://github.com/BC1337/Astro-Playground" target="_blank" class="demo-button">View Code</a>
-            </div>
-            <ul class="project-details" style="display: none;">
-                <li>Developed frontend with Astro + React for a dynamic and interactive user interface.</li>
-                <li>Implemented backend services with Node.js and Express.js for user authentication and authorization.</li>
-                <li>Used MongoDB as the database to store user information securely.</li>
-                <li>Implemented JWT authentication for secure user authentication and access control.</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <h3 class="project-title">Web Scraper</h3>
-            <img src="https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg" alt="Web Scraper Screenshot" class="project-screenshot">
-            <div class="button-container">
-                <button class="details-toggle">Toggle Details</button>
-                <a href="https://github.com/BC1337/nextJS_brightdata_scraper" target="_blank" class="demo-button">View Code</a>
-            </div>
-            <ul class="project-details" style="display: none;">
-                <li>Developed with Next.js for efficient server-side rendering and API routes.</li>
-                <li>Utilized Cheerio library for parsing HTML and extracting targeted data.</li>
-                <li>Integrated BrightData API for proxy management and overcoming CAPTCHA challenges.</li>
-                <li>Configured a user-friendly CLI interface for easy data extraction.</li>
-            </ul>
-        </div>
-    </section>
+<BaseLayout pageTitle="My Projects">
+  <section class="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-grid">
+      <ProjectCard
+        title="Brain Trainer Arcade"
+        screenshot="/braintrainer.png"
+        description="Developed various challenging mini-games to boost cognitive skills."
+        demoHref="https://brain-trainer-arcade.vercel.app"
+        demoText="View Demo"
+      />
+      <ProjectCard
+        title="Fullstack Auth App"
+        screenshot="/fullstackauth.png"
+        description="Developed frontend with Astro + React for a dynamic and interactive user interface."
+        demoHref="https://github.com/BC1337/Astro-Playground"
+        demoText="View Code"
+      />
+      <ProjectCard
+        title="Web Scraper"
+        screenshot="https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg"
+        description="Developed with Next.js for efficient server-side rendering and API routes."
+        demoHref="https://github.com/BC1337/nextJS_brightdata_scraper"
+        demoText="View Code"
+      />
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-    /* Styles for the projects section */
-    .projects {
-        padding: 20px;
-    }
+.projects {
+  padding: 40px 20px;
+  background-color: var(--background-color); /* Using variable from global.css */
+}
 
-    /* Styles for the section title */
-    .section-title {
-        font-size: 24px;
-        border-bottom: 1px solid #f9a825;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #f9a825;
-    }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
 
-    /* Styles for the project card */
-    .project-card {
-        background-color: #f9f9f9;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: 100%;
-        position: relative; 
-    }
-
-
-    /* Styles for the project title */
-    .project-title {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: #007bff;
-    }
-
-    /* Styles for the button container */
-    .button-container {
-        display: flex;
-        margin-top: 15px;
-        width: calc(100% - 40px); /* Adjusted width to fit within the card */
-    }
-
-    /* Styles for the Toggle Details button */
-    .details-toggle {
-        background-color: #007bff;
-        color: #fff;
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-right: 10px; 
-    }
-    .details-toggle:hover {
-        background-color: #0056b3;
-    }
-
-    /* Styles for the View Demo button */
-    .demo-button {
-        background-color: #28a745; /* Green color */
-        color: #fff;
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .demo-button:hover {
-        background-color: #218838; /* Darker shade of green on hover */
-    }
-
-    /* Styles for the project details */
-    .project-details {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 10px;
-    }
-    .project-details li {
-        margin-bottom: 8px;
-    }
-
-    /* Styles for the list items */
-    li {
-        color: #007bff;
-        font-weight: 600;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-    }
 </style>
-
-<script>
-    // JavaScript for toggling project details visibility
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleButtons = document.querySelectorAll('.details-toggle');
-
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const detailsList = this.parentElement.parentElement.querySelector('.project-details');
-                const computedStyle = window.getComputedStyle(detailsList);
-                const currentDisplay = computedStyle.getPropertyValue('display');
-
-                detailsList.style.display = currentDisplay === 'none' ? 'block' : 'none';
-            });
-        });
-    });
-</script>
