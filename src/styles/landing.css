@@ -1,30 +1,51 @@
 .featured-post {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   background-color: #1c2a36; /* Navy Blue */
   border-radius: 8px;
   overflow: hidden;
-}
-
-.featured-post-content {
-  display: flex;
+  position: relative; /* Add position relative to create a reference for absolute positioning */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
 }
 
 .featured-post-image {
-  flex: 1;
-  max-width: 200px;
+  flex: 0 0 70%; /* Set the image container to take up 70% of the available space */
   overflow: hidden;
-  border-right: 2px solid #f9a825; 
 }
 
-.featured-post img {
-  width: 100%;
-  height: auto;
+.featured-post-image img {
+  width: 100%; /* Ensure the image takes up 100% of the container width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px 0 0 8px;
 }
 
 .featured-post-details {
-  flex: 2;
-  padding: 15px;
+  flex: 0 0 30%; /* Set the details container to take up 30% of the available space */
+  padding: 20px; /* Add padding for spacing */
+  position: relative; /* Add position relative for z-index */
+}
+
+.featured-post-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Adjust the position of the orange line */
+  width: 2px;
+  height: 100%;
+  background-color: #f9a825; /* Vibrant Orange */
+  z-index: 1; /* Ensure the line is above other content */
+}
+
+.featured-post-details::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Position the second line in the middle */
+  left: -10px; /* Adjust the position of the second orange line */
+  width: 2px;
+  height: 100%;
+  background-color: #f9a825; /* Vibrant Orange */
+  z-index: 1; /* Ensure the line is above other content */
 }
 
 .featured-post-title {
